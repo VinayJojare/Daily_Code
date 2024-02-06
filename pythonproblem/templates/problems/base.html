@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Coding Problems</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:rgb(88, 190, 221)
+   
+           
+           
+        }
+
+        header {
+            background-color:color-mix(in hsl shorter hue, color percentage, color percentage);
+        
+            padding: 10px;
+            text-align: center;
+            border-top: 5px solid #5fc6e0;
+            border-bottom: 5px solid #5fc6e0;
+            font-size:x-large;
+            font-style:normal;
+        }
+
+        h1 {
+            color: #00e1ff;
+            margin-top: 10px;
+            
+        }
+
+        .nav-btn {
+            background-color: #1bc467;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-success {
+            background-color: #318143;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color:color-mix(in hsl shorter hue, color percentage, color percentage);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #5ad3db;
+        
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>< DAILY CODING ></h1>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    
+    <footer>
+        &copy; 2024 Daily Coding Problems
+    </footer>
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

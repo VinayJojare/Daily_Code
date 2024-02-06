@@ -1,0 +1,78 @@
+{% extends 'problems/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<style>
+    .subscriber-table {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .subscriber-table th,
+    .subscriber-table td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid forestgreen;
+    }
+
+    .subscriber-table th {
+        background-color: #0bb867;
+        color: #fff;
+    }
+
+   
+
+    .subscriber-table tbody tr:not(:first-child) {
+    background-color: #fff; /* Set background color to white for all rows except the first one */
+}
+
+
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100%); /* Subtract header and footer height */
+        background-image: url("{% static 'html-system-website-concept.jpg' %}");
+        background-size: contain;
+        background-position: center;
+        z-index: -1; /* Ensure the background image is behind other content */
+    }
+</style>
+
+<h1 style="text-align: center;">Top Performer</h1>
+
+<div class="container">
+    <div class="background-image"></div>
+    <div class="background-overlay"></div> <!-- Overlay for dim effect -->
+
+    <!-- Replace this with actual subscriber data from your backend -->
+    <table class="subscriber-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Problems Solved</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for performer in top_pros %}
+            <tr {% if forloop.first %}style="background-color: #ffcc00;"{% endif %}>
+                <td>{{ performer.id }}</td>
+                <td>{{ performer.name }}</td>
+                <td>{{ performer.email }}</td>
+                <td>{{ performer.problems_solved }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    &copy; 2024 Daily Coding Problems
+</footer>
+
+{% endblock %}

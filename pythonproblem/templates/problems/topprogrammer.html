@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribers - Daily Coding Problems</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            background-color: #f8f9fa;
+            color: #000;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #555;
+        }
+
+        h1 {
+            color: #2317ce;
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #555;
+        }
+
+        /* Subscriber Table Styles */
+        .subscriber-table {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .subscriber-table th,
+        .subscriber-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid forestgreen;
+        }
+
+        .subscriber-table th {
+            background-color: #0bb867;
+            color: #fff;
+        }
+
+        .subscriber-table tbody tr:nth-child() {
+            background-color: #444;
+
+        }
+    </style>
+</head>
+<body class="dark-mode" style="color: black;">
+
+
+
+    <header>
+        <a href="{% url 'index' %}" class="nav-btn">Home</a>
+        <a href="{% url 'pythonproblem:problem_list' %}" class="nav-btn">Problems</a>
+        <a href="{% url 'subscriber_list' %}" class="nav-btn">Subscribers</a>
+        <a href="{% url 'top_performer' %}" class="nav-btn">Top Performer</a>
+        
+    </header>
+
+    <h1 style="text-align: center;">Top Performer</h1>
+    
+    <div class="container">
+
+        
+        <!-- Replace this with actual subscriber data from your backend -->
+        <table class="subscriber-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Problems Solved</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for performer in top_performers %}
+                <tr {% if forloop.first %}style="background-color: #ffcc00;"{% endif %}>
+                    
+                        <td>{{ performer.id }}</td>
+                        <td>{{ performer.name }}</td>
+                        <td>{{ performer.email }}</td>
+                        <td>{{ performer.problems_solved }}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer>
+        &copy; 2024 Daily Coding Problems
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
