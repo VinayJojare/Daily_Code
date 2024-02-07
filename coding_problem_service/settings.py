@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path,os
+from .gmail_pass import gmail_passkey
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,4 +134,4 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "vinayjojare3@gmail.com"
-EMAIL_HOST_PASSWORD = "bipl yltt wudj xork"
+EMAIL_HOST_PASSWORD = gmail_passkey
