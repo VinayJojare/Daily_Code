@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path,os
-from .gmail_passkey import gmail_code
+from gmail_passkey import gmail_code
 
 
 
