@@ -1,4 +1,4 @@
-# your_app/management/commands/populate_problems.py
+
 
 from django.core.management.base import BaseCommand
 from pythonproblem.models import Problem
