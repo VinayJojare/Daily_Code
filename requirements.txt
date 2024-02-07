@@ -19,4 +19,8 @@ mysql-connector-python==8.2.0
 mysqlclient==2.2.0
 SQLAlchemy==2.0.25
 sqlparse==0.4.4
+<<<<<<< HEAD
 PyMySQL==1.1.0
+=======
+PyMySQL==1.1.0
+>>>>>>> 91d7fca2fa5d6607e575fadaeb62fdec942210b4
