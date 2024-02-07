@@ -13,3 +13,10 @@ requests==2.31.0
 python-decouple-3.8
 django-environ-0.11.2
 WhiteNoise-6.6.0
+mysql==0.0.3
+mysql-connector==2.2.9
+mysql-connector-python==8.2.0
+mysqlclient==2.2.0
+SQLAlchemy==2.0.25
+sqlparse==0.4.4
+PyMySQL==1.1.0
