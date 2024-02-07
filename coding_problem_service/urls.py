@@ -1,4 +1,3 @@
-# Your main project's urls.py
 from django.contrib import admin
 from django.urls import include, path
 from pythonproblem.views import index, subscribe, send_problem, send_email, subscriber_list, submit_solution, top_performer, top_pro
